@@ -7,4 +7,4 @@ from blog.models import Post
 def post_list(request):
     #pobiera wszystkie posty do zmiennej
     posts = Post.objects.all()
-    return HttpResponse(posts)
+    return render(request, "blog/post/list.html")
